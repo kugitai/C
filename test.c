@@ -2,6 +2,6 @@
 
 int main(){
     char a[4];
-    sscanf("%s",a);
+    scanf("%s",a);
     printf("%s\n",a);
 }
