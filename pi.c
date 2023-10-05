@@ -6,9 +6,9 @@ int main(void){
     int inpoint = 0;//打った点のうち円の中に入ったもの
     int allpoint;//全ての点
     int i;//カウンター
-    double x;//点の座標
-    double y;//上と同じ
-    double pi;
+    float x;//点の座標
+    float y;//上と同じ
+    float pi;
     srand(time(NULL));
 
     printf("何個の点をおきますか？(入力したらエンターを押してください)\n");
@@ -20,7 +20,7 @@ int main(void){
         if(x*x+y*y <= 1.0){
             inpoint++;
         }
-        pi = inpoint*4/(double)allpoint;}
-    printf("%f",pi);
+        pi = inpoint*4/(float)allpoint;}
+    printf("%f\n",pi);
     return 0;
 }
