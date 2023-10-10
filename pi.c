@@ -11,9 +11,10 @@ int main(void){
     float pi;
     srand(time(NULL));
 
-    printf("何個の点をおきますか？(入力したらエンターを押してください)\n");
+    puts("何個の点をおきますか？(入力したらエンターを押してください)");
 
     scanf("%d",&allpoint);
+    
     for(i = 0;i < allpoint;i++){
         x = (float)rand()/RAND_MAX;
         y = (float)rand()/RAND_MAX;
