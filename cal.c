@@ -19,18 +19,21 @@ int div(float a,float b){     //割り算の関数
 
 int main(void){
     int foo; //終了するか否かの判定のための仮の変数
+    char buff[100];
     int n1,n2;
     int sw;
-    printf("1つ目の数:"); scanf("%d",&n1);
-    printf("2つ目の数:"); scanf("%d",&n2);
+    printf("1つ目の数:");
+    fgets(buff,100,stdin);
+    sscanf(buff,"%d",&n1);
+    printf("2つ目の数:");
+    fgets(buff,100,stdin);
+    sscanf(buff,"%d",&n2);
     puts("どの計算をしますか?");
     printf("足し算:1 引き算:2 掛け算:3 割り算:4  "); scanf("%d",&sw);
     switch (sw) {
-        case 1 : printf("計算結果は%dです\n",add(n1,n2));
-        case 2 : printf("計算結果は%dです\n",sub(n1,n2)); 
-        case 3 : printf("計算結果は%dです\n",mul(n1,n2));
+        case 1 : printf("計算結果は%dです\n",add(n1,n2)); break;
+        case 2 : printf("計算結果は%dです\n",sub(n1,n2)); break; 
+        case 3 : printf("計算結果は%dです\n",mul(n1,n2)); break;
         case 4 : printf("計算結果は%dです\n",div((float)n1,(float)n2));}
-    //puts("終了しますか？(yesなら0を押してエンター,noならそのままエンター)"); 
-    //scanf("%d",&foo);
     return 0;
 }
