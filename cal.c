@@ -23,7 +23,7 @@ int main(void){
     int n1 = 0,n2 = 0;
     int sw;
 while(1){
-    while(n1 == 0 || n2 == 0)
+    while(1)
         {
         printf("1つ目の数:");
         fgets(buff,100,stdin);
@@ -31,6 +31,11 @@ while(1){
         printf("2つ目の数:");
         fgets(buff,100,stdin);
         sscanf(buff,"%d",&n2);
+        if(n1 == 0 && n2 == 0){
+            puts("数字を入力してください");
+        }else{
+            break;
+        }
         }
     puts("どの計算をしますか?");
     printf("足し算:1 引き算:2 掛け算:3 割り算:4  "); scanf("%d",&sw);
@@ -41,6 +46,8 @@ while(1){
         case 3 : printf("計算結果は%dです\n",mul(n1,n2)); break;
         case 4 : printf("計算結果は%dです\n",div((float)n1,(float)n2));
         }
+    n1 = 0;
+    n2 = 0;
     }
     return 0;
 }
