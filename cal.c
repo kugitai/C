@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
 int add(int a,int b){     //足し算の関数
     int c = a + b;
@@ -23,8 +23,7 @@ int main(void){
     int n1 = 0,n2 = 0;
     int sw;
 while(1){
-    while(1)
-        {
+    do{
         printf("1つ目の数:");
         fgets(buff,100,stdin);
         sscanf(buff,"%d",&n1);
@@ -36,7 +35,7 @@ while(1){
         }else{
             break;
         }
-        }
+        }while(1);
     puts("どの計算をしますか?");
     printf("足し算:1 引き算:2 掛け算:3 割り算:4  "); scanf("%d",&sw);
     switch (sw)
