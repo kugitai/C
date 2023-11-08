@@ -52,3 +52,5 @@ Mkfile.old
 dkms.conf
 # my setting
 .DS_Store
+test.c
+tes
