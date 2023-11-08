@@ -22,7 +22,7 @@ int main(void){
     char buff[100]; //入力を受け取るための変数
     int n1 = 0,n2 = 0;
     int sw;
-while(1){
+do{
     do{
         printf("1つ目の数:");
         fgets(buff,100,stdin);
@@ -47,6 +47,6 @@ while(1){
         }
     n1 = 0;
     n2 = 0;
-    }
+    }while(1);
     return 0;
 }
