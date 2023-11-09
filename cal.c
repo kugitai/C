@@ -20,7 +20,7 @@ int div(float a,float b){     //割り算の関数
 int main(void){
     int foo; //終了するか否かの判定のための仮の変数
     char buff[100]; //入力を受け取るための変数
-    int n1 = 0,n2 = 0;
+    int n1,n2;
     int sw;
 do{
     do{
