@@ -23,19 +23,12 @@ int main(void){
     int n1,n2;
     int sw;
 do{
-    do{
-        printf("1つ目の数:");
-        fgets(buff,100,stdin);
-        sscanf(buff,"%d",&n1);
-        printf("2つ目の数:");
-        fgets(buff,100,stdin);
-        sscanf(buff,"%d",&n2);
-        if(n1 == 0 && n2 == 0){
-            puts("数字を入力してください");
-        }else{
-            break;
-        }
-        }while(1);
+    printf("1つ目の数:");
+    fgets(buff,100,stdin);
+    sscanf(buff,"%d",&n1);
+    printf("2つ目の数:");
+    fgets(buff,100,stdin);
+    sscanf(buff,"%d",&n2);
     puts("どの計算をしますか?");
     printf("足し算:1 引き算:2 掛け算:3 割り算:4  "); scanf("%d",&sw);
     switch (sw)
@@ -45,8 +38,8 @@ do{
         case 3 : printf("計算結果は%dです\n",mul(n1,n2)); break;
         case 4 : printf("計算結果は%dです\n",div((float)n1,(float)n2));
         }
-    n1 = 0;
-    n2 = 0;
-    }while(1);
+    puts("終了しますか？(Y/n)");
+    scanf("%s",&foo);
+    }while(strcmp(foo,"Y") != 0);
     return 0;
 }
