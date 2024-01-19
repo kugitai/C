@@ -6,8 +6,8 @@ int main(void){
     int inpoint = 0;//打った点のうち円の中に入ったもの
     int allpoint;//全ての点
     int i;//カウンター
-    float x;//点の座標
-    float y;//上と同じ
+    float x;//打った点のX座標
+    float y;//打った点のY座標
     float pi;
     srand(time(NULL));
 
