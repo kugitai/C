@@ -33,7 +33,8 @@ int main(void){
         sscanf(buff,"%d",&n2);
         puts("どの計算をしますか?");
         printf("足し算:1 引き算:2 掛け算:3 割り算:4  "); 
-        scanf("%d",&sw);
+        fgets(buff,BUFF_SIZE,stdin);
+        sscanf(buff,"%d",&sw);
         switch (sw)
         {
             case 1 : printf("計算結果は%dです\n",add(n1,n2)); break;
@@ -44,7 +45,8 @@ int main(void){
         }
         puts("終了しますか？");
         puts("0:終了 1:続ける");
-        scanf("%d",&foo);
+        fgets(buff,BUFF_SIZE,stdin);
+        sscanf(buff,"%d",&foo);
         if(foo == 0){
             break;
         }
