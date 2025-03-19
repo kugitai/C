@@ -16,6 +16,10 @@ float mul(float a, float b){     //掛け算の関数
     return c;}
 
 float div(float a, float b){     //割り算の関数
+    if (b == 0){
+        puts("0で割ることはできません");
+        return 0;
+    } 
     float c = a / b;
     return c;}
 
@@ -32,7 +36,7 @@ int main(void){
         fgets(buff,BUFF_SIZE,stdin);
         sscanf(buff,"%f",&n2);
         puts("どの計算をしますか?");
-        printf("足し算:1 引き算:2 掛け算:3 割り算:4  "); 
+        printf("足し算:1 引き算:2 掛け算:3 割り算:4\n"); 
         fgets(buff,BUFF_SIZE,stdin);
         sscanf(buff,"%d",&sw);
         switch (sw)
